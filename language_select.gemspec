@@ -3,13 +3,13 @@ $:.push File.expand_path('../lib', __FILE__)
 require 'language_select/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'language_select'
+  s.name        = 'complete_language_select'
   s.version     = LanguageSelect::VERSION
-  s.authors     = ['Jacob Eiler']
-  s.email       = ['jacob.eiler@apide.com']
-  s.homepage    = 'https://github.com/Apide/language_select'
+  s.authors     = ['Seun Adekunle']
+  s.email       = ['adekunleseun001@gmail.com']
+  s.homepage    = 'https://github.com/seunadex/language_select'
   s.summary     = %q{Language Select Plugin}
-  s.description = %q{Provides a simple helper to get an HTML select list of ISO-639-1 languages.  The list of languages is obtained from Wikipedia (http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).}
+  s.description = %q{Provides a simple helper to get an HTML select list of ISO-639-1 languages with a couple of langauge variant.  The list of languages is obtained from Wikipedia (http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).}
 
   s.rubyforge_project = 'language_select'
 

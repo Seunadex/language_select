@@ -27,9 +27,9 @@ module ActionView
 
       let(:selected_en_option) do
         if defined?(Tags::Base)
-          content_tag(:option, 'English', :selected => :selected, :value => 'en')
+          content_tag(:option, 'English(American)', :selected => :selected, :value => 'en-US')
         else
-          '<option value="en" selected="selected">English</option>'
+          '<option value="en-US" selected="selected">English(American)</option>'
         end
       end
 
@@ -54,27 +54,27 @@ module ActionView
         end
 
         it "selects the value of language" do
-          walrus.language = 'en'
+          walrus.language = 'en-US'
           t = builder.language_select(:language)
           t.should include(selected_en_option)
         end
       end # language_select
 
       describe "#priority_languages" do
-        let(:tag) { builder.language_select(:language, ['en']) }
+        let(:tag) { builder.language_select(:language, ['en-US']) }
 
         it "puts the priority languages at the top" do
-          tag.should include("#{select_tag}<option value=\"en")
+          tag.should include("#{select_tag}<option value=\"en-US")
         end
 
         it "inserts a divider" do
-          tag.should include('>English</option><option value="" disabled="disabled">-------------</option>')
+          tag.should include('>English(American)</option><option value="" disabled="disabled">-------------</option>')
         end
 
         it "does not mark two languages as selected" do
-          walrus.language = "en"
+          walrus.language = "en-US"
           str = <<-EOS.strip
-              </option>\n<option value="en" selected="selected">English</option>
+              </option>\n<option value="en-US" selected="selected">English(American)</option>
             EOS
           tag.should_not include(str)
         end
