@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    language_select (0.0.2)
+    complete_language_select (0.0.3)
 
 GEM
   remote: https://rubygems.org/
@@ -57,6 +57,9 @@ PLATFORMS
 DEPENDENCIES
   actionpack
   appraisal
-  language_select!
+  complete_language_select!
   pry
   rspec
+
+BUNDLED WITH
+   1.16.1
