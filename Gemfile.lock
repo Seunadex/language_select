@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    language_select (0.0.2)
+    language_select (0.1.2)
 
 GEM
   remote: https://rubygems.org/
@@ -60,3 +60,6 @@ DEPENDENCIES
   language_select!
   pry
   rspec
+
+BUNDLED WITH
+   1.16.1
